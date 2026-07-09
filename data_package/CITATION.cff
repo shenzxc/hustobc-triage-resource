@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: >-
+  A Triage-and-Audit Resource for the 9,408 Undeciphered Classes of
+  HUST-OBC, with 279 Verified Metadata Corrections
+type: dataset
+authors:
+  - name: "〔Author / Independent Researcher〕"
+    # - given-names: 〔given〕
+    #   family-names: 〔family〕
+    #   orcid: "https://orcid.org/〔ORCID〕"
+version: "1.0.0"
+date-released: "2026-07-08"
+license: CC-BY-4.0
+keywords:
+  - oracle bone script
+  - HUST-OBC
+  - dataset audit
+  - metadata correction
+  - digital humanities
+  - palaeography
+  - triage
+abstract: >-
+  A triage-and-audit resource over all 9,408 undeciphered character classes of
+  HUST-OBC. Each class is annotated with its most shape-similar official glyph
+  code (and that code's official reading and status) from the Yinqi Wenyuan
+  platform, and with whether the authoritative Jiaguwenzi Gulin compendium already
+  contains a discussion entry for it. A construction-guaranteed identity mapping
+  over the Y+H classes yields 279 verified metadata corrections (classes labelled
+  undeciphered that already carry an official reading), each re-verified against
+  the public API. All records are reproducible from login-free endpoints; no
+  copyrighted scans or fonts are redistributed.
+identifiers:
+  - type: doi
+    value: "〔Zenodo DOI — TODO after publish〕"
+    description: "This dataset deposit"

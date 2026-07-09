@@ -1,0 +1,36 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+Copyright (c) 2026 〔Author / Independent Researcher〕
+
+You are free to share and adapt this dataset for any purpose, provided you give
+appropriate credit (cite the data descriptor and this deposit).
+
+------------------------------------------------------------------------------
+SCOPE OF THIS LICENSE AND ATTRIBUTION OF UNDERLYING SOURCES
+------------------------------------------------------------------------------
+
+This CC BY 4.0 grant covers the ORIGINAL COMPILATION contributed by the authors:
+the class-to-code mappings, the shape-retrieval similarity scores, the
+discussion-presence flags, the constructive-identity mapping, the 279-correction
+selection, the field schema, and the accompanying scripts and documentation.
+
+The dataset records FACTUAL values (character codes, official readings, page/entry
+identifiers, reproduction URLs) obtained from third-party sources. These underlying
+sources retain their own rights and must also be credited by reusers:
+
+  * Glyph images and class labels: HUST-OBC (Wang et al., Scientific Data, 2024),
+    distributed under CC BY 4.0.
+  * Official readings, glyph codes, and exegetical cross-references: the Yinqi
+    Wenyuan platform (Key Laboratory of Oracle Information Processing, Anyang
+    Normal University). Readings are reproduced as factual data via the platform's
+    public, login-free API.
+
+This deposit does NOT redistribute any copyrighted material from the underlying
+works: it contains no scanned pages of the Jiaguwenzi Gulin, Leizuan, or glyph
+dictionaries, and no official glyph fonts. Only codes, identifiers, factual
+readings, and reproduction URLs are included, so that any user can regenerate the
+evidence from the authoritative source.
+
+Reusers intending to redistribute anything beyond these factual records (e.g.
+scanned pages or fonts) must obtain permission from the respective rights holders.

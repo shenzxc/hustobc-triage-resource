@@ -1,0 +1,56 @@
+{
+  "task": "HUST-OBC triage resource",
+  "generated_at": "2026-07-08T16:02:04",
+  "inputs": {
+    "mapping": "分析/官方映射_HUSTOBC.json",
+    "yqwy_all_glyphs": "分析/yqwy_all_glyphs.json",
+    "yh279_corrections": "论文/data_package/yh279_corrections.json"
+  },
+  "outputs": {
+    "csv": "论文/data_package/triage_resource.csv",
+    "json": "论文/data_package/triage_resource.json",
+    "cache": "论文/data_package/triage_resource_api_cache.json"
+  },
+  "row_count": 9408,
+  "unique_top1_official_codes": 2751,
+  "api_success_unique_codes": 2731,
+  "api_failure_unique_codes": 20,
+  "api_failure_codes": [
+    "U60D21",
+    "U6113C",
+    "U610A3",
+    "U6043A",
+    "U609C4",
+    "U606C3",
+    "U60F58",
+    "U605F2",
+    "U60D30",
+    "U61957",
+    "U6110E",
+    "U606D6",
+    "U60864",
+    "U60A66",
+    "U602FC",
+    "U60FA8",
+    "U6089D",
+    "U606D9",
+    "U61217",
+    "U60F25"
+  ],
+  "unique_success_codes_with_jitilin_entry": 1763,
+  "row_counts_by_official_status": {
+    "undeciphered": 4999,
+    "deciphered": 4409
+  },
+  "row_counts_by_jitilin_entry": {
+    "true": 6229,
+    "false": 3107,
+    "unknown-if-fetch-failed": 72
+  },
+  "row_counts_by_source_group": {
+    "L": 4444,
+    "X": 2288,
+    "Y+H": 2676
+  },
+  "verified_correction_rows": 279
+}
