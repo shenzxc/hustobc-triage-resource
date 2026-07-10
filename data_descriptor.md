@@ -1,11 +1,7 @@
 # A Triage-and-Audit Resource for the 9,408 Undeciphered Classes of HUST-OBC, with 279 Verified Metadata Corrections
 
-> **Data Descriptor draft (v1).** Architect-written for *Scientific Data*'s six-section format.
-> Numbers are real (from `论文/data_package/` and `分析/评估报告.md`). 〔brackets〕 need author input.
-> This is a **data paper**, distinct from the companion methods paper (`论文/manuscript.tex`).
-
-**Authors**: 〔Author list; may include "Independent Researcher"〕
-**Corresponding**: 〔email〕
+**Authors**: 〔Author name(s); affiliation may read "Independent Researcher"〕
+**Corresponding author**: 〔email; ORCID〕
 
 ---
 
@@ -89,6 +85,16 @@ while HUST-OBC labels them undeciphered constitute the 279 corrections; all were
 
 ## Data Records
 
+![Resource overview](figures/fig_resource_overview.png)
+
+**Figure 1. Overview of the resource over 9,408 HUST-OBC undeciphered classes.**
+(a) Source-group composition (L 4,444; X 2,288; Y+H 2,676). (b) Top-1 shape-match status
+(deciphered 4,409 / undeciphered 4,999) and *Jitilin*-entry flag (entry present 6,229 = 66.2%;
+no entry 3,107; unresolved 72). (c) The 279 verified corrections by reading type (plain 266;
+loan/variant 11; tentative 2). (d) For the 2,676 Y+H classes, the constructive-identity code and
+the shape top-1 code agree only 19.7% of the time, quantifying the font-vs-handwriting domain gap.
+All counts are computed directly from the released tables.
+
 The resource is deposited on Zenodo (DOI: 10.5281/zenodo.21290640) and comprises:
 
 **1. `triage_resource.csv` / `.json` — 9,408 rows, one per undeciphered class.** Columns
@@ -118,7 +124,8 @@ independent shape signal. For `X`/`L` rows only the shape signal is available.
 **Corrections (279).** Precision rests on two independent guarantees rather than a statistical
 estimate: (i) the identity mapping is exact by construction, and (ii) every entry was
 re-verified against the live API (279/279 returned the expected reading on 2026-07-06). The set
-was additionally submitted upstream to the HUST-OBC maintainers as an erratum 〔issue link〕.
+was additionally submitted upstream to the HUST-OBC maintainers as an erratum
+(https://github.com/Pengjie-W/HUST-OBC/issues/8).
 
 **Shape-retrieval signal.** Held-out retrieval accuracy validates the top-1 shape signal: on
 4,219 query images never seen in training (drawn from 891 classes), Top-1 is 84.7% (Wilson 95%
@@ -157,8 +164,22 @@ lack entries; users should stratify by attestation era before interpreting a `fa
 - **Reproduction.** Every reading and flag is regenerable from the login-free endpoints
   documented in the repository; no copyrighted scans or fonts are included in the release.
 - **Relationship to the methods paper.** The analysis motivating this resource (the pseudo-target
-  problem, the discussion-depth triage framework, case studies) is reported separately 〔cite
-  companion paper / arXiv〕; this Descriptor documents the released data.
+  problem, the discussion-depth triage framework, case studies) is reported in a companion methods
+  manuscript, included as a preprint in the same data release (Zenodo DOI 10.5281/zenodo.21290640);
+  this Descriptor documents the released data.
+- **Minimal example (Python/pandas).** Load the resource and extract the highest-priority
+  genuinely-unclaimed targets:
+
+  ```python
+  import pandas as pd
+  df = pd.read_csv("triage_resource.csv")
+  # Candidates with no existing Jitilin discussion (most likely truly unclaimed):
+  unclaimed = df[df.top1_has_jitilin_entry == "false"]
+  # Verified corrections to relabel as deciphered:
+  corrections = df[df.is_verified_correction == True]
+  # For Y+H classes, use the authoritative identity code, not the shape match:
+  yh = df[df.source_group == "Y+H"]
+  ```
 
 ---
 
@@ -171,5 +192,17 @@ redistributed, under the platform's public-access terms; HUST-OBC images are reu
 
 ## References
 
-〔HUST-OBC (Scientific Data 2024), HWOBC, OBC306, Jitilin, Leizuan, glyph dictionaries, ResNet;
-reuse `论文/references.bib`.〕
+*(BibTeX in `references.bib`; the journal template will format these. Core entries:)*
+
+1. Wang, P. *et al.* An open dataset for oracle bone character recognition and decipherment.
+   *Scientific Data* **11**, 976 (2024). https://doi.org/10.1038/s41597-024-03807-x
+2. Li, B. *et al.* HWOBC — a handwriting oracle bone character recognition database.
+   *J. Phys.: Conf. Ser.* **1651**, 012050 (2020).
+3. Huang, S. *et al.* OBC306: A large-scale oracle bone character recognition dataset.
+   *ICDAR* 681–688 (2019).
+4. Guan, H. *et al.* Deciphering oracle bone language with diffusion models. *ACL* 15554–15567 (2024).
+5. He, K., Zhang, X., Ren, S. & Sun, J. Deep residual learning for image recognition. *CVPR* 770–778 (2016).
+6. Yu, X. (ed.). *Jiaguwenzi Gulin* (甲骨文字诂林), 4 vols. Zhonghua Book Company, Beijing (1996).
+7. Yao, X. & Xiao, D. (eds.). *Yinxu Jiagu Keci Leizuan* (殷墟甲骨刻辞类纂), 3 vols. Zhonghua Book Company, Beijing (1989).
+8. Li, Z. *Jiaguwenzi Bian* (甲骨文字编), 4 vols. Zhonghua Book Company, Beijing (2012).
+9. Key Laboratory of Oracle Information Processing, Anyang Normal University. *Yinqi Wenyuan* platform. http://jgw.aynu.edu.cn/ (accessed 2026).
