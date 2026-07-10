@@ -32,5 +32,5 @@ abstract: >-
   copyrighted scans or fonts are redistributed.
 identifiers:
   - type: doi
-    value: "〔Zenodo DOI — TODO after publish〕"
+    value: "10.5281/zenodo.21290640"
     description: "This dataset deposit"

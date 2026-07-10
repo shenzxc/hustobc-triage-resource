@@ -89,7 +89,7 @@ while HUST-OBC labels them undeciphered constitute the 279 corrections; all were
 
 ## Data Records
 
-The resource is deposited at 〔Zenodo DOI — TODO〕 and comprises:
+The resource is deposited on Zenodo (DOI: 10.5281/zenodo.21290640) and comprises:
 
 **1. `triage_resource.csv` / `.json` — 9,408 rows, one per undeciphered class.** Columns
 (full definitions in `triage_resource_data_dictionary.md`):
@@ -164,10 +164,10 @@ lack entries; users should stratify by attestation era before interpreting a `fa
 
 ## Data & Code Availability
 
-Data package and builder: 〔Zenodo DOI〕. Code, API documentation, and the companion analysis:
-〔repo URL — public on acceptance〕. Source materials remain © their publishers; only
-character codes, page identifiers, readings, and reproduction URLs are redistributed, under the
-platform's public-access terms; HUST-OBC images are reused under CC BY 4.0.
+Data package, builder, and companion preprint: Zenodo DOI 10.5281/zenodo.21290640;
+release repository https://github.com/shenzxc/hustobc-triage-resource. Source materials remain
+© their publishers; only character codes, page identifiers, readings, and reproduction URLs are
+redistributed, under the platform's public-access terms; HUST-OBC images are reused under CC BY 4.0.
 
 ## References
 

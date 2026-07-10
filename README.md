@@ -37,7 +37,8 @@ ones — and audits 279 stale "undeciphered" labels as a by-product.
 
 ## Citation
 
-See `data_package/CITATION.cff`. Cite the Zenodo DOI of this release.
+Cite the Zenodo DOI of this release: **10.5281/zenodo.21290640**
+(https://doi.org/10.5281/zenodo.21290640). See `data_package/CITATION.cff`.
 
 ## Note
 
