@@ -15,26 +15,5 @@
     "palaeography",
     "triage",
     "glyph retrieval"
-  ],
-  "creators": [
-    {
-      "name": "〔Family, Given〕",
-      "affiliation": "〔Independent Researcher〕",
-      "orcid": "〔ORCID — optional〕"
-    }
-  ],
-  "related_identifiers": [
-    {
-      "relation": "isSupplementTo",
-      "identifier": "〔arXiv ID of the methods paper — TODO〕",
-      "scheme": "arxiv"
-    },
-    {
-      "relation": "isDerivedFrom",
-      "identifier": "10.1038/s41597-024-03807-x",
-      "scheme": "doi",
-      "resource_type": "dataset"
-    }
-  ],
-  "notes": "Underlying official readings are factual data obtained via the Yinqi Wenyuan platform (Anyang Normal University) public API; HUST-OBC images are CC BY 4.0. See LICENSE for attribution scope. Replace all bracketed placeholders before publishing."
+  ]
 }
